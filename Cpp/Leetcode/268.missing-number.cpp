@@ -1,4 +1,4 @@
-/* https://leetcode.cn/problems/missing-number/comments/ */
+/* https://leetcode.cn/problems/missing-number/ */
 
 #include <iostream>
 #include <vector>
