@@ -2,21 +2,23 @@
 #include <vector>
 #include <algorithm>
 #include <iomanip>
-
 using namespace std;
 
+// 书类型定义
 typedef struct {
     string ISBN;  // ISBN
     string name;  // 书名
     double price; // 价格
 } Book;
 
+// 双链表结点类型定义
 typedef struct LinkedList {
     Book book;
     LinkedList *next{};
     LinkedList *prev{};
 } LinkedNode;
 
+// 定义一个全局变量 len 用于存储链表长度
 int len = 0;
 
 // 表创建函数
@@ -32,6 +34,9 @@ bool print(LinkedNode *head);
 // 重载表打印函数用于打印指定行数据
 bool print(LinkedNode *head, int row);
 // 表搜索函数
+bool searchMenu(LinkedNode *head);
+bool searchISBN(LinkedNode *head);
+bool searchName(LinkedNode *head);
 bool searchPrice(LinkedNode *head);
 // 表插入函数
 LinkedNode *insertNode(LinkedNode *head);
@@ -66,7 +71,7 @@ void choice(LinkedNode *head) {
                 }
                 break;
             case 2:
-                if(!searchPrice(head)) {
+                if(!searchMenu(head)) {
                     cout << "搜索失败！" << endl << endl;
                 } else {
                     cout << "搜索成功！" << endl << endl;
@@ -170,6 +175,89 @@ bool print(LinkedNode *head, int row) {
          << left << setw(5)  << p->book.price << endl;
 
     return true;
+}
+
+bool searchMenu(LinkedNode *head) {
+    int choice = -1;
+    cout << "1. 按 ISBN 查找\n";
+    cout << "2. 按书名查找\n";
+    cout << "3. 按价格查找\n";
+    cout << "0. 退出\n";
+    cout << "请输入选项：";
+    cin >> choice;
+    cout << endl;
+    switch (choice) {
+        case 1:
+            if(!searchISBN(head)) {
+                return false;
+            }
+            break;
+        case 2:
+            if(!searchName(head)) {
+                return false;
+            }
+            break;
+        case 3:
+            if(!searchPrice(head)) {
+                return false;
+            }
+            break;
+        case 0:
+            break;
+        default:
+            cout << "无效的输入" << endl;
+    }
+    return true;
+}
+
+bool searchISBN(LinkedNode *head) {
+    bool flag = false;
+    auto p = head;
+    string ISBN;
+
+    cout << "请输入你想查询的ISBN：";
+    cin >> ISBN;
+
+    for(int i = 1; i <= len; ++i) {
+        if(p->book.ISBN == ISBN) {
+            if(!print(head, i)) {
+                return false;
+            }
+            flag = true;
+        }
+        p = p->next;
+    }
+
+    if(flag) {
+        return true;
+    }
+    cout << "未找到值" << endl;
+    return false;
+}
+
+bool searchName(LinkedNode *head) {
+    bool flag = false;
+    auto p = head;
+    string name;
+
+    cout << "请输入你想查询的书名：";
+    cin >> name;
+
+    for(int i = 1; i <= len; ++i) {
+        if(p->book.name == name) {
+            if(!print(head, i)) {
+                return false;
+            }
+            flag = true;
+        }
+        p = p->next;
+    }
+
+    if(flag) {
+        return true;
+    }
+    cout << "未找到值" << endl;
+    return false;
 }
 
 bool searchPrice(LinkedNode *head) {
@@ -283,6 +371,7 @@ LinkedNode *deleteNode(LinkedNode *head) {
         delete(temp);
         temp = nullptr;
         p->next = nullptr;
+        --len;
         return head;
     }
 
@@ -295,6 +384,7 @@ LinkedNode *deleteNode(LinkedNode *head) {
     delete(temp);
     temp = nullptr;
     p->next = p->next->next;
+    --len;
     return head;
 }
 
