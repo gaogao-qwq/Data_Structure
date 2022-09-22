@@ -1,5 +1,4 @@
-#include <vector>
-#include <queue>
+#include "LC.h"
 
 class Node {
 public:

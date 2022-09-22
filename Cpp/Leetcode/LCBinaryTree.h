@@ -1,6 +1,5 @@
 /* https://zhuanlan.zhihu.com/p/547639030 */
-#include<vector>
-#include<queue>
+#include "LC.h"
 
 //使用LeetCode上树节点定义
 struct TreeNode {
