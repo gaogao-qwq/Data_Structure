@@ -24,8 +24,7 @@ public:
     }
     // 复制构造函数（很必要，方便临时对象的复制）
     TreeNodePtr(const TreeNodePtr& t) {
-        if (t.node == nullptr)
-        {
+        if (t.node == nullptr) {
             node = nullptr;
             return;
         }
