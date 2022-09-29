@@ -22,14 +22,14 @@ vector<int> twoSum(vector<int>& numbers, int target) {
 }
 
 // 喜提超时
-// vector<int> twoSum(vector<int>& numbers, int target) {
-//     for(auto i = 0; i < numbers.size() - 1; ++i) {
-//         for(auto j = i + 1; j < numbers.size(); ++j) {
-//             if(numbers[i] + numbers[j] == target) return {i + 1, j + 1};
-//         }
-//     }
-//     return {};
-// }
+vector<int> twoSumBad(vector<int>& numbers, int target) {
+    for(auto i = 0; i < numbers.size() - 1; ++i) {
+        for(auto j = i + 1; j < numbers.size(); ++j) {
+            if(numbers[i] + numbers[j] == target) return {i + 1, j + 1};
+        }
+    }
+    return {};
+}
 
 int main() {
     vector<int> numbers{2,7,11,15};

@@ -1,8 +1,5 @@
 /* https://leetcode.cn/problems/minimum-money-required-before-transactions */
-#include <iostream>
-#include <vector>
-#include <algorithm>
-using namespace std;
+#include "LC.h"
 
 long long minimumMoney(vector<vector<int>>& transactions) {
     sort(transactions.begin(), transactions.end(), [](vector<int> a, vector<int> b) {

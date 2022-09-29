@@ -1,7 +1,5 @@
 /* https://leetcode.cn/problems/count-days-spent-together */
-#include <iostream>
-#include <unordered_map>
-using namespace std;
+#include "LC.h"
 
 int dtoi(string date) {
     int days = 0;

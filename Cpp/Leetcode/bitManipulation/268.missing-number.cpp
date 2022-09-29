@@ -1,8 +1,5 @@
 /* https://leetcode.cn/problems/missing-number/ */
-
-#include <iostream>
-#include <vector>
-using namespace std;
+#include "LC.h"
 
 class Solution {
 public:

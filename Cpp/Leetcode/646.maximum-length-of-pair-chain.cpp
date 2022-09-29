@@ -1,9 +1,6 @@
 /* https://leetcode.cn/problems/maximum-length-of-pair-chain/ */
 // 动态规划 贪心 二分查找
-#include <iostream>
-#include <vector>
-#include <algorithm>
-using namespace std;
+#include "LC.h"
 
 class Solution {
 public:

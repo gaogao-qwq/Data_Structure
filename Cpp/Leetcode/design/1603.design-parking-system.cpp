@@ -1,6 +1,5 @@
 /* https://leetcode.cn/problems/design-parking-system/ */
-#include <iostream>
-using namespace std;
+#include "LC.h"
 
 class ParkingSystem {
 public:

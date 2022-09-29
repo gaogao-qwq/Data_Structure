@@ -1,10 +1,6 @@
 /* https://leetcode.cn/problems/valid-parentheses/ */
 /* https://leetcode.cn/problems/valid-parentheses/solution/zhu-bu-fen-xi-tu-jie-zhan-zhan-shi-zui-biao-zhun-d/ */
-
-#include <iostream>
-#include <unordered_map>
-#include <stack>
-using namespace std;
+#include "LC.h"
 
 class Solution {
 public:

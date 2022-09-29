@@ -1,8 +1,5 @@
 /* https://leetcode.cn/problems/maximum-matching-of-players-with-trainers */
-#include <iostream>
-#include <vector>
-#include <algorithm>
-using namespace std;
+#include "LC.h"
 
 int matchPlayersAndTrainers(vector<int>& players, vector<int>& trainers) {
     int cnt = 0;

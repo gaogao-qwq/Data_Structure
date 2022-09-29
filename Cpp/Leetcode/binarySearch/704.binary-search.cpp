@@ -1,7 +1,5 @@
 /* https://leetcode.cn/problems/binary-search/ */
-#include <iostream>
-#include <vector>
-using namespace std;
+#include "LC.h"
 
 int main(void) {
     vector<int> nums{-1,0,3,5,9,12};

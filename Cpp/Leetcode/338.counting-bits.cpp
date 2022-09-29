@@ -1,8 +1,5 @@
 /* https://leetcode.cn/problems/counting-bits/ */
-#include <iostream>
-#include <bitset>
-#include <vector>
-using namespace std;
+#include "LC.h"
 
 int main(void) {
     int n = 5;

@@ -1,8 +1,5 @@
 /* https://leetcode.cn/problems/find-resultant-array-after-removing-anagrams/ */
-#include <iostream>
-#include <vector>
-#include <algorithm>
-using namespace std;
+#include "LC.h"
 
     vector<string> removeAnagrams(vector<string>& words) {
         if(words.size() == 1) {

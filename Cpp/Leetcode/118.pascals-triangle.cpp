@@ -1,7 +1,4 @@
-#include <iostream>
-#include <bitset>
-#include <vector>
-using namespace std;
+#include "LC.h"
 
 vector<vector<int>> generate(int numRows) {
     vector<vector<int>> ans{{1}, {1, 1}};

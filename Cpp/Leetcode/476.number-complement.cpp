@@ -1,8 +1,5 @@
 /* https://leetcode.cn/problems/number-complement/ */
-
-#include <iostream>
-#include <bitset>
-using namespace std;
+#include "LC.h"
 
 class Solution {
 public:

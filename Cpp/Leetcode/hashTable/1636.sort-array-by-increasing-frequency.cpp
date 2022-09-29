@@ -1,9 +1,5 @@
 /* https://leetcode.cn/problems/sort-array-by-increasing-frequency/ */
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <unordered_map>
-using namespace std;
+#include "LC.h"
 
 vector<int> frequencySort(vector<int>& nums) {
     if(nums.size() < 2) return nums;

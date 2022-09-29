@@ -1,8 +1,5 @@
 /* https://leetcode.cn/problems/array-partition/ */
-#include <iostream>
-#include <algorithm>
-#include <vector>
-using namespace std;
+#include "LC.h"
 
 int arrayPairSum(vector<int>& nums) {
     int ans = 0;

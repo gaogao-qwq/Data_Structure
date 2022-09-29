@@ -1,3 +1,4 @@
+/* https://leetcode.cn/problems/check-array-formation-through-concatenation/ */
 #include "LC.h"
 
 bool canFormArray(vector<int>& arr, vector<vector<int>>& pieces) {

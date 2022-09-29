@@ -1,7 +1,5 @@
-#include <iostream>
-#include <unordered_map>
-#include <vector>
-using namespace std;
+/* https://leetcode.cn/problems/check-distances-between-same-letters/ */
+#include "LC.h"
 
 bool checkDistances(string s, vector<int>& distance) {
     unordered_map<char, int> umap;

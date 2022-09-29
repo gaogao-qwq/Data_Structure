@@ -1,7 +1,5 @@
 /* https://leetcode.cn/problems/largest-substring-between-two-equal-characters/ */
-#include <iostream>
-#include <unordered_map>
-using namespace std;
+#include "LC.h"
 
 int maxLengthBetweenEqualCharacters(string s) {
     int ans = -1;

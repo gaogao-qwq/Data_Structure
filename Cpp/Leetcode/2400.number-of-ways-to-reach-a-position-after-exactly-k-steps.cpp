@@ -1,8 +1,6 @@
 /* https://leetcode.cn/problems/number-of-ways-to-reach-a-position-after-exactly-k-steps/ */
 /* https://leetcode.cn/problems/number-of-ways-to-reach-a-position-after-exactly-k-steps/solution/by-tsreaper-qzp3/ */
-#include <iostream>
-#include <vector>
-using namespace std;
+#include "LC.h"
 
 const int MOD = 1000000007;
 

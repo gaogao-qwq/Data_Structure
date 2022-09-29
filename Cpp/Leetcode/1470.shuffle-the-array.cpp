@@ -1,7 +1,5 @@
 /* https://leetcode.cn/problems/shuffle-the-array/ */
-#include <iostream>
-#include <vector>
-using namespace std;
+#include "LC.h"
 
 vector<int> shuffle(vector<int>& nums, int n) {
     if(n == 1) return nums;

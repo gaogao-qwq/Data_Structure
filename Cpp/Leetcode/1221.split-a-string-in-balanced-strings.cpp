@@ -1,8 +1,5 @@
 /* https://leetcode.cn/problems/split-a-string-in-balanced-strings/ */
-#include <iostream>
-#include <algorithm>
-#include <stack>
-using namespace std;
+#include "LC.h"
 
 int balancedStringSplit(string s) {
     int ans = 0;

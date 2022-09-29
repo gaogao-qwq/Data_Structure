@@ -1,6 +1,5 @@
 /* https://leetcode.cn/problems/bulb-switcher-ii/ */
-#include <iostream>
-using namespace std;
+#include "LC.h"
 
 int main(void) {
     int n = 0, presses = 0;
