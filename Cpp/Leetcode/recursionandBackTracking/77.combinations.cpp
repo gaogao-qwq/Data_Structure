@@ -27,6 +27,11 @@ private:
 
 int main() {
     Solution solution;
-    auto ans = solution.combine(4, 2);
+    for(auto i : solution.combine(4, 2)) {
+        for(auto j : i) {
+            cout << j << " ";
+        }
+        cout << endl;
+    }
     return 0;
 }
