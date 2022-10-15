@@ -1,7 +1,6 @@
 /* https://leetcode.cn/problems/populating-next-right-pointers-in-each-node/ */
 #include "LC.h"
 
-// Definition for a Node.
 class Node {
 public:
     int val;
