@@ -97,8 +97,6 @@ int main() {
     Solution2 s2;
     Solution3 s3;
     vector<int> nums{48,99,37,4,-31};
-    // cout << s1.shortestSubarray(nums, 19) << endl;
-    // cout << s2.shortestSubarray(nums, 19) << endl;
     cout << s3.shortestSubarray(nums, 140) << endl;
     return 0;
 }
