@@ -26,7 +26,7 @@ public:
 };
 
 // 暴力 + dp，dp 负责降低最内层循环求和步骤的时间复杂度开销
-// dp[i] 代表前i个元素的和 dp[i] = dp[i - 1] + nums[i]
+// dp[i] 代表前i个元素的和 dp[i + 1] = dp[i] + nums[i];
 // 时间复杂度 O(n2)，然而会超时
 class Solution2 {
 public:
