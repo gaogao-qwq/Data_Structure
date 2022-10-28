@@ -35,24 +35,24 @@ public:
         int n = arr.size();
         // 左边界 left[i] 为左侧严格小于 arr[i] 的最近元素位置（不存在时为 -1）
         vector<int> left(n, -1);
-        stack<int> st;
+        stack<int> stk;
         for (int i = 0; i < n; ++i) {
-            while (!st.empty() && arr[st.top()] >= arr[i]) {
-                st.pop(); // 移除无用数据
+            while (!stk.empty() && arr[stk.top()] >= arr[i]) {
+                stk.pop(); // 移除无用数据
             }
-            if (!st.empty()) left[i] = st.top();
-            st.push(i);
+            if (!stk.empty()) left[i] = stk.top();
+            stk.push(i);
         }
 
         // 右边界 right[i] 为右侧小于等于 arr[i] 的最近元素位置（不存在时为 n）
         vector<int> right(n, n);
-        while (!st.empty()) st.pop();
+        while (!stk.empty()) stk.pop();
         for (int i = n - 1; i >= 0; --i) {
-            while (!st.empty() && arr[st.top()] > arr[i]) {
-                st.pop(); // 移除无用数据
+            while (!stk.empty() && arr[stk.top()] > arr[i]) {
+                stk.pop(); // 移除无用数据
             }
-            if (!st.empty()) right[i] = st.top();
-            st.push(i);
+            if (!stk.empty()) right[i] = stk.top();
+            stk.push(i);
         }
 
         long ans = 0;
