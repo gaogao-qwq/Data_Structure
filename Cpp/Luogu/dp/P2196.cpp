@@ -5,6 +5,7 @@
 using namespace std;
 
 // 维护一个全局变量 _max 和一个全局数组 path 用于存储答案
+// 这里的临时 nums 数组实际上蕴含了 dp 的思想在其中
 vector<int> path, tmp, nums;
 int _max = 0, sum = 0, N = 0;
 
