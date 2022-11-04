@@ -24,6 +24,10 @@ public:
                     if (j < 0 || k < 0) {
                         continue;
                     }
+                    // 实际上并不是所有的圆都能包含坐标 (i, j) (i = j = radius - 1) 的，所以只需要加一行判断即可
+                    if (pow(j - r, 2) + pow(k - c, 2) > pow(radius, 2)) {
+                        continue;
+                    }
                     grid[j][k] += (int)floor((double)q / (1 + sqrt(pow(j - r, 2) + pow(k - c, 2))));
                 }
             }
