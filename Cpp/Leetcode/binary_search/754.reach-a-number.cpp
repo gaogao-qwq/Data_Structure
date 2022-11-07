@@ -1,5 +1,6 @@
 #include "LC.h"
 
+// 非二分
 class Solution {
 public:
     int reachNumber(int target) {
