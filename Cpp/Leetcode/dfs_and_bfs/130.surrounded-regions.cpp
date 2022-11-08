@@ -8,13 +8,13 @@ public:
     }
 private:
     // 上下左右
-    const int di[] = {-1, 1, 0, 0};
-    const int dj[] = {0, 0, -1, 1};
+    const int di[4] = {-1, 1, 0, 0};
+    const int dj[4] = {0, 0, -1, 1};
 };
 
 int main() {
     Solution s;
-    vector<vector<char>> board{{"X","X","X","X"},{"X","O","O","X"},{"X","X","O","X"},{"X","O","X","X"}}
+    vector<vector<char>> board{{'X','X','X','X'},{'X','O','O','X'},{'X','X','O','X'},{'X','O','X','X'}};
     s.solve(board);
     for (auto i : board) {
         for (auto j : i) {
