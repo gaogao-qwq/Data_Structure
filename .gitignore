@@ -1,6 +1,10 @@
-.vscode
 *.exe
 *.out
+
+Cargo.lock
+
+.vscode
 .idea
 cmake-build-debug
 out
+target
