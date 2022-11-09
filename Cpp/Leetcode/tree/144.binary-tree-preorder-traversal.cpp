@@ -1,7 +1,5 @@
 /* https://leetcode.cn/problems/binary-tree-preorder-traversal/ */
-#include <iostream>
 #include "LCBinaryTree.h"
-using namespace std;
 
 void preorder(TreeNode *root, vector<int> &ans) {
     if(root == nullptr) {

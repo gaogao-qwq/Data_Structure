@@ -1,7 +1,5 @@
 /* https://leetcode.cn/problems/binary-tree-inorder-traversal/ */
-#include <iostream>
 #include "LCBinaryTree.h"
-using namespace std;
 
 void inorder(TreeNode *root, vector<int> &ans) {
     if(root == nullptr) {
