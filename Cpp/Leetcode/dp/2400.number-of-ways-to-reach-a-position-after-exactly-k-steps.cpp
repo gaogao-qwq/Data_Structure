@@ -4,6 +4,7 @@
 
 const int MOD = 1000000007;
 
+// TODO: redo
 int numberOfWays(int startPos, int endPos, int k) {
     int d = abs(endPos - startPos);
     if((d + k) % 2 || d > k) return 0;

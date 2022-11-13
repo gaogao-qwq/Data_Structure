@@ -1,7 +1,8 @@
 /* https://leetcode.cn/problems/bulb-switcher-ii/ */
 #include "LC.h"
 
-int main(void) {
+// TODO: redo
+int main() {
     int n = 0, presses = 0;
     cin >> n >> presses;
     if (presses > 2 && n > 2) return 8;

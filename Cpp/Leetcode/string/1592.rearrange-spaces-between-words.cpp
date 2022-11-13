@@ -1,7 +1,7 @@
 /* https://leetcode.cn/problems/rearrange-spaces-between-words/ */
 #include "LC.h"
 
- class Solution {
+class Solution {
 public:
     vector<string_view> split(const string_view &str, char trim) {
         int n = str.size();
