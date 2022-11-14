@@ -1,30 +1,26 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// 01背包
+// 01背包 滚动数组
 int main() {
     int T = 0, M = 0;
     cin >> T >> M;
-    // 初始化数组
     vector<int> time(M), val(M);
     for (int i = 0; i < M; ++i) {
         cin >> time[i] >> val[i];
     }
 
-    vector<vector<int>> dp(M, vector<int>(T + 1));
-    // 初始化 dp 数组第一行
-    dp[0][0] = 0;
-    for (int i = 1; i <= T; ++i) {
-        if (time[0] <= i) dp[0][i] = val[0];
-    }
+    // dp滚动数组全部置0
+    vector<int> dp(T + 1, 0);
 
-    for (int i = 1; i < M; ++i) {
-        for (int j = 0; j <= T; ++j) {
-            if (time[i] > j) dp[i][j] = dp[i - 1][j];
-            else dp[i][j] = max(dp[i - 1][j], dp[i - 1][j - time[i]] + val[i]);
+    // 先遍历物品
+    for (int i = 0; i < M; ++i) {
+        // 再遍历背包，记得倒序
+        for (int j = T; j >= time[i]; --j) {
+            dp[j] = max(dp[j], dp[j - time[i]] + val[i]);
         }
     }
 
-    cout << dp[M - 1][T];
+    cout << dp[T];
     return 0;
 }
