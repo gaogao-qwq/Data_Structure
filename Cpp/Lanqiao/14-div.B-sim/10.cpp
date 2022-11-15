@@ -1,6 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
-
 // 10. 最小下标
 
 // 问题描述
@@ -14,49 +11,76 @@ using namespace std;
 // 给定小蓝的字符串 S，请问当初始下标为多少时，生成的字符串最小。
 
 // 输入格式
-
 // 输入一行包含一个字符串。
 
 // 输出格式
-
 // 输出一行，包含一个整数，为所求的下标，如果有多个下标满足要求，输出最小的那个。
 
 // 样例输入1
-
 // DCBA
+
 // 样例输出1
-
 // 3
+
 // 样例输入2
-
 // AAAA
+
 // 样例输出2
-
 // 0
+
 // 评测用例规模与约定
-
 // 令 |S| 表示 S 的长度。
-// 对于 30% 的评测用例， 1 <= |S| <= 100 。
-// 对于  50% 的评测用例，  1 <= |S| <= 1000 。
-// 对于 70% 的评测用例， 1 <= |S| <= 10000。
-// 对于  80% 的评测用例，  1 <= |S| <= 100000 。
-// 对于所有评测用例， 1 < = ∣S∣ < = 1000000 。
+// 对于 30% 的评测用例，1 <= |S| <= 100。
+// 对于 50% 的评测用例，1 <= |S| <= 1000。
+// 对于 70% 的评测用例，1 <= |S| <= 10000。
+// 对于 80% 的评测用例，1 <= |S| <= 100000。
+// 对于 100% 的评测用例，1 < = ∣S∣ < = 1000000。
 
-unordered_map<char, int> umap{{'A', 1}, {'B', 2}, {'C', 3}, {'D', 4}, {'E', 5}, {'F', 6}};
+#include <bits/stdc++.h>
+using namespace std;
+
+string str;
+int n;
+bool vis[1000005];
+
+int inline getNext(int i) {
+    return (i + str[i] - 'A' + 1) % n;
+}
 
 int main() {
-    string s;
-    cin >> s;
-    int n = s.length();
-    int ans = 0;
-    for (int i = 0; i < n; ++i) {
-        string tmp;
-        tmp.push_back(s[i]);
-        int index = umap[tmp[0]] + i;
-        for (int j = 1; j < 10; ++j) {
-            tmp.push_back((s[ ( + index) % n ]));
+    cin >> str;
+    n = str.size();
+    for (int i = 0; i < 1e6 + 5; i++)
+        vis[i] = false;
+    int i = 0, j = 1, len = 0, _i = 0, _j = 1;
+    vis[0] = true, vis[1] = true;
+    while (i < n && j < n && len < n) {
+        int t = str[_i] - str[_j];
+        if (!t) {
+            _i = getNext(_i);
+            _j = getNext(_j);
+            len++;
+        } else {
+            if (t > 0) {
+                int temp = i;
+                while (temp != _i) {
+                    vis[temp] = true;
+                    temp = getNext(temp);
+                }
+                while (vis[i]) i++;
+                vis[i] = true;
+            } else {
+                int temp = j;
+                while (temp != _j) {
+                    vis[temp] = true;
+                    temp = getNext(temp);
+                }
+                while (vis[j]) j++;
+                vis[j] = true;
+            }
+            _i = i, _j = j;
         }
-        tmp = "";
     }
+    cout << min(i, j);
     return 0;
 }
