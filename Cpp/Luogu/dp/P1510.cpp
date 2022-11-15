@@ -14,6 +14,7 @@ int main() {
     for (int i = 0; i < n; ++i) {
         for (int j = C; j >= c[i]; --j) {
             dp[j] = max(dp[j], dp[j - c[i]] + v[i]);
+            // 每当体积满足要求时，更新ans
             if (dp[j] >= V) ans = max(ans, C - j);
         }
     }
