@@ -16,6 +16,6 @@ public:
 int main() {
     Solution s;
     vector<int> nums{1,3,0,0,2,4};
-    cout << boolalpha <<s.isIdealPermutation(nums);
+    cout << boolalpha << s.isIdealPermutation(nums);
     return 0;
 }
