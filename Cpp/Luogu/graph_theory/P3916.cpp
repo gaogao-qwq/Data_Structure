@@ -2,28 +2,31 @@
 using namespace std;
 
 int tmp = 0;
+vector<int> adj[100010];
 vector<int> ans;
-unordered_set<int> uset;
+int h[100010] = {0};
 
-void dfs(vector<vector<int>>adj, int p) {
-    for (int i = 0; i < adj.size(); ++i) {
-        if (adj[i][0] == p) {
-            dfs(adj, adj[i][1]);
-        }
+void dfs(int p, int _max) {
+    if (h[p]) return;
+    ans[p] = _max;
+    ++h[p];
+    for (int i = 0; i < adj[p].size(); ++i) {
+        dfs(adj[p][i], _max);
     }
 }
 
 int main() {
     int N = 0, M = 0;
-    cin >> N >> M;
-    vector<vector<int>> adj(M, vector<int>(2));
+    scanf("%d%d", &N, &M);
+    ans.resize(N + 1);
     // 反向建边
-    for (int i = 0; i < M; ++i)
-        cin >> adj[i][1] >> adj[i][0];
-    // 从 N 遍历到 1
-    for (int i = N; i >= 1; --i)
-        dfs(adj, i);
-    for (auto i : ans)
-        cout << i << " ";
+    int u = 0, v = 0;
+    for (int i = 0; i < M; ++i) {
+        scanf("%d%d", &u, &v);
+        adj[v].push_back(u);
+    }
+    for (int i = N; i >= 1; --i) dfs(i, i);
+    for (int i = 1; i <= N; ++i)
+        printf("%d ", ans[i]);
     return 0;
 }
