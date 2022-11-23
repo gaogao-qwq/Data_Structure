@@ -3,6 +3,7 @@
 
 Cargo.lock
 
+cmake-build-debug-qt
 .vscode
 .idea
 cmake-build-debug
