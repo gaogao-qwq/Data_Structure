@@ -4,21 +4,16 @@ using namespace std;
 class Solution {
 public:
     int countSubarrays(vector<int>& nums, int k) {
-        int ans = 0, equalIndex = -1;
-        for (int i = 0; i < nums.size(); ++i) {
-            if (nums[i] == k) { nums[i] = 0; equalIndex = i; continue; }
-            if (nums[i] > k) { nums[i] = 1; continue; }
-            if (nums[i] < k) { nums[i] = -1; continue; }
+        int kIndex = (int)distance(nums.begin(), find(nums.begin(), nums.end(), k));
+        unordered_map<int, int> cnt{{0, 1}};
+        for (int i = kIndex - 1, sum = 0; i >=0; --i) {
+            sum += nums[i] < k ? 1 : -1;
+            ++cnt[sum];
         }
-        for (int l = 0; l < nums.size(); ++l) {
-            int prefixSum = 0;
-            bool containEqual = false;
-            for (int r = l; r < nums.size(); ++r) {
-                prefixSum += nums[r];
-                if (r == equalIndex) containEqual = true;
-                if (containEqual && (r - l + 1) % 2 == 0 && prefixSum == 1) {++ans;continue;}
-                if (containEqual && prefixSum == 0) {++ans;continue;}
-            }
+        int ans = cnt[0] + cnt[-1];
+        for (int i = kIndex + 1, sum = 0; i < nums.size(); ++i) {
+            sum += nums[i] > k ? 1 : -1;
+            ans += cnt[sum] + cnt[sum - 1];
         }
         return ans;
     }
