@@ -1,5 +1,5 @@
 /* https://leetcode.cn/problems/check-if-it-is-a-straight-line/ */
-#include "../LC_Headers/LC.h"
+#include "LC.h"
 
 bool checkStraightLine(vector<vector<int>>& coordinates) {
     if(coordinates.size() == 2) return true;

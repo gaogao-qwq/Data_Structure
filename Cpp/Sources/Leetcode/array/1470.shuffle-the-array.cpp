@@ -1,5 +1,5 @@
 /* https://leetcode.cn/problems/shuffle-the-array/ */
-#include "../LC_Headers/LC.h"
+#include "LC.h"
 
 vector<int> shuffle(vector<int>& nums, int n) {
     if(n == 1) return nums;

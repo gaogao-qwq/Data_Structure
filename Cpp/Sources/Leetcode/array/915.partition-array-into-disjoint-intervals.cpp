@@ -1,4 +1,4 @@
-#include "../LC_Headers/LC.h"
+#include "LC.h"
 
 // 铁超时，简单问题复杂化，你就非得惦记着你那b双指针？
 class Solution1 {

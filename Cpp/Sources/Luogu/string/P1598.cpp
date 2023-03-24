@@ -1,11 +1,12 @@
 #include <bits/stdc++.h>
+#include <string>
 using namespace std;
 
 int main() {
     int cnt[26] = {};
     for (int i = 0; i < 4; ++i) {
         char str[100];
-        gets(str);
+		std::getline(std::cin, str);
         int n = strlen(str);
         for (int i = 0; i < n; ++i) {
             if (str[i] >= 'A' && str[i] <= 'Z') ++cnt[str[i] - 'A'];

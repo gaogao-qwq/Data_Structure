@@ -1,5 +1,5 @@
 /* https://leetcode.cn/problems/design-linked-list/ */
-#include "../LC_Headers/LCListNode.h"
+#include "LCListNode.h"
 
 class MyLinkedList {
 public:
@@ -10,12 +10,12 @@ public:
         ListNode(int x) : val(x), next(nullptr) {}
         ListNode(int x, ListNode *next) : val(x), next(next) {}
     };
-    
+
     MyLinkedList() {
         _dummyHead = new ListNode;
         _size = 0;
     }
-    
+
     int get(int index) {
         if(index > _size - 1 || index < 0) {
             return -1;
@@ -29,7 +29,7 @@ public:
         }
         return -1;
     }
-    
+
     void addAtHead(int val) {
         if(_size == 0) {
             auto p = new ListNode(val);
@@ -41,7 +41,7 @@ public:
         _dummyHead->next = p;
         ++_size;
     }
-    
+
     void addAtTail(int val) {
         if(_size == 0) {
             auto p = new ListNode(val);
@@ -56,7 +56,7 @@ public:
         p->next = new ListNode(val);
         ++_size;
     }
-    
+
     void addAtIndex(int index, int val) {
         if(index > _size) return;
         if(index <= 0) {
@@ -85,7 +85,7 @@ public:
             p = p->next;
         }
     }
-    
+
     void deleteAtIndex(int index) {
         if(index > _size - 1 || index < 0) {
             return;

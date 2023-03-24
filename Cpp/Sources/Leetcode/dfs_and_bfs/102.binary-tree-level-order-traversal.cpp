@@ -1,5 +1,5 @@
 /* https://leetcode.cn/problems/binary-tree-level-order-traversal/ */
-#include "../LC_Headers/LCBinaryTree.h"
+#include "LCBinaryTree.h"
 
 vector<vector<int>> levelOrder(TreeNode *root) {
     vector<vector<int>> ans;

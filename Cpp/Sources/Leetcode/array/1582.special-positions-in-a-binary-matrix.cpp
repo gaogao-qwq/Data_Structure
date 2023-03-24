@@ -1,6 +1,6 @@
 // https://leetcode.cn/problems/special-positions-in-a-binary-matrix/
 // 数组 矩阵
-#include "../LC_Headers/LC.h"
+#include "LC.h"
 
 class Solution {
 public:

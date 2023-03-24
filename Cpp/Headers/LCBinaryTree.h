@@ -1,5 +1,5 @@
 /* https://zhuanlan.zhihu.com/p/547639030 */
-#include "../dfs_and_bfs/LC.h"
+#include "LC.h"
 
 //使用LeetCode上树节点定义
 struct TreeNode {

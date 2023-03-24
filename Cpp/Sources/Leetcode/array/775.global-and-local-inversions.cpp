@@ -1,4 +1,4 @@
-#include "../LC_Headers/LC.h"
+#include "LC.h"
 
 // 只要出现一个全局倒置而非局部倒置，就返回false
 class Solution {

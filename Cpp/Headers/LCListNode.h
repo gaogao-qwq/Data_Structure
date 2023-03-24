@@ -1,4 +1,4 @@
-#include "../design/LC.h"
+#include "LC.h"
 
 struct ListNode {
     int val;

@@ -1,5 +1,5 @@
 /* https://leetcode.cn/problems/maximum-product-of-two-elements-in-an-array/ */
-#include "../LC_Headers/LC.h"
+#include "LC.h"
 
 int maxProduct(vector<int>& nums) {
     if(nums.size() == 2) return (nums[1] - 1) * (nums[0] - 1);

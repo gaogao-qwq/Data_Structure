@@ -1,4 +1,4 @@
-#include "../LC_Headers/LC.h"
+#include "LC.h"
 
 class Solution {
 public:
