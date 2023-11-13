@@ -1,1 +1,11 @@
 cmake-build-debug-gcc/
+builds/
+build/
+bin/
+
+.clangd
+*.o
+*.a
+*.out
+*.exe
+
