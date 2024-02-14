@@ -7,5 +7,6 @@ bin/
 *.o
 *.a
 *.out
+*.in
 *.exe
 
