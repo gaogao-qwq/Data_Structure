@@ -1,6 +1,7 @@
 #include <stdio.h>
-#include <cstring>
-#include <climits>
+#include <string.h>
+#include <limits.h>
+#include <errno.h>
 
 const char *bitap_search(const char *text, const char *pattern) {
 	int m = strlen(pattern), i;
@@ -28,13 +29,13 @@ const char *bitap_search(const char *text, const char *pattern) {
 int main(const int argc, const char *argv[]) {
 	if (argc != 3) {
 		printf("Must take in 2 arguments\n");
-		return 0;
+		return EINVAL;
 	}
 	const char *res = bitap_search(argv[1], argv[2]);
 	if (res == NULL) {
 		printf("Not found\n");
-		return 0;
+		return EINVAL;
 	}
 	printf("Founded: %s\n", res);
-	return 0;
+	return EINVAL;
 }
