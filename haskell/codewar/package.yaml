@@ -1,0 +1,12 @@
+name: cw
+version: 0.1.0
+synopsis: codewars solutions
+
+dependencies:
+- base >= 4.7 && < 5
+- text >= 2.0 && < 3
+- split >= 0.2 && < 1
+- containers
+
+library:
+  source-dirs: src

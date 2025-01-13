@@ -1,0 +1,7 @@
+resolver: ghc-9.2.8
+install-ghc: true
+
+extra-deps:
+  - text-2.1.2
+  - data-array-byte-0.1.0.1
+  - split-0.2.5
