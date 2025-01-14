@@ -1,5 +1,5 @@
-import Data.Map (Map, fromList)
-import Data.Map.Strict ((!))
+import           Data.Map        (Map, fromList)
+import           Data.Map.Strict ((!))
 
 roman :: Map Char Int
 roman = fromList [('I', 1), ('V', 5), ('X', 10), ('L', 50), ('C', 100), ('D', 500), ('M', 1000)]
@@ -11,7 +11,7 @@ subnot 'X' 'L' = True -- 40
 subnot 'X' 'C' = True -- 90
 subnot 'C' 'D' = True -- 400
 subnot 'C' 'M' = True -- 900
-subnot _ _ = False
+subnot _ _     = False
 
 -- "MM"      -> 2000
 -- "MDCLXVI" -> 1666

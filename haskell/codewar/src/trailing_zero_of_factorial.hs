@@ -1,4 +1,4 @@
-import GHC.Float (powerFloat)
+import           GHC.Float (powerFloat)
 
 -- https://mathworld.wolfram.com/Factorial.html
 zeros :: Int -> Int

@@ -1,11 +1,11 @@
-import Data.List (transpose)
+import           Data.List (transpose)
 
 -- array = [[1,2,3],
 --          [8,9,4],
 --          [7,6,5]]
 -- snail(array) #=> [1,2,3,4,5,6,7,8,9]
 snail :: [[Int]] -> [Int]
-snail [] = []
+snail []       = []
 snail (xs:xss) = xs ++ (snail . reverse . transpose) xss
 
 -- snail :: [[Int]] -> [Int]

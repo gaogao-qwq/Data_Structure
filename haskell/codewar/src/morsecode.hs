@@ -1,6 +1,6 @@
-import Data.List
-import Data.Map (Map, fromList)
-import Data.Map.Strict ((!))
+import           Data.List
+import           Data.Map        (Map, fromList)
+import           Data.Map.Strict ((!))
 
 morseCodes :: Map String String
 morseCodes = fromList [(".-", "0"), ("--.-", "1")]
