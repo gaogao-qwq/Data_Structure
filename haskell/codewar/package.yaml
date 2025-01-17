@@ -4,9 +4,31 @@ synopsis: codewars solutions
 
 dependencies:
 - base >= 4.7 && < 5
-- text >= 2.0 && < 3
-- split >= 0.2 && < 1
-- containers
+- attoparsec
+- haskell-src-exts
+- hspec
+- hspec-attoparsec
+- hspec-codewars
+- hspec-contrib
+- hspec-formatters-codewars
+- hspec-megaparsec
+- HUnit-approx
+- QuickCheck
+- lens
+- megaparsec
+- mtl
+- parsec
+- persistent
+- persistent-sqlite
+- persistent-template
+- random
+- regex-pcre
+- regex-posix
+- regex-tdfa
+- split
+- text
+- transformers
+- vector
 
 library:
   source-dirs: src

@@ -15,8 +15,30 @@ library
   hs-source-dirs:
       src
   build-depends:
-      base >=4.7 && <5
-    , containers
-    , split >=0.2 && <1
-    , text >=2.0 && <3
+      HUnit-approx
+    , QuickCheck
+    , attoparsec
+    , base >=4.7 && <5
+    , haskell-src-exts
+    , hspec
+    , hspec-attoparsec
+    , hspec-codewars
+    , hspec-contrib
+    , hspec-formatters-codewars
+    , hspec-megaparsec
+    , lens
+    , megaparsec
+    , mtl
+    , parsec
+    , persistent
+    , persistent-sqlite
+    , persistent-template
+    , random
+    , regex-pcre
+    , regex-posix
+    , regex-tdfa
+    , split
+    , text
+    , transformers
+    , vector
   default-language: Haskell2010

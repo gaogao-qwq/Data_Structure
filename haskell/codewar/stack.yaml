@@ -1,7 +1,6 @@
-resolver: ghc-9.2.8
+resolver: lts-20.26
 install-ghc: true
 
 extra-deps:
-  - text-2.1.2
-  - data-array-byte-0.1.0.1
-  - split-0.2.5
+  - url: https://github.com/codewars/hspec-formatters-codewars/archive/v0.3.0.tar.gz
+  - url: https://github.com/codewars/hspec-codewars/archive/v0.1.0.tar.gz

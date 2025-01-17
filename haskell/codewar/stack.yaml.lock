@@ -5,24 +5,30 @@
 
 packages:
 - completed:
-    hackage: text-2.1.2@sha256:2898d240693a61911efc6e9f9dd3f05a1561684b0c42da964b76ae6463dba754,10989
+    name: hspec-formatters-codewars
     pantry-tree:
-      sha256: 55d235c81b0b35a55d8b33f832c6df0c7a3ff546b707172f97c68ab17b87f5d4
-      size: 8647
+      sha256: 6121ec7c2f419ed4d4e9a60c5a82a41f8f1cf321cdf81b8629c7a99bd29c3ccc
+      size: 855
+    sha256: c7572cf25789bf5b153195813fbbb3b9509ba693bccfb1db521ee09364f8b173
+    size: 6268
+    url: https://github.com/codewars/hspec-formatters-codewars/archive/v0.3.0.tar.gz
+    version: 0.3.0
   original:
-    hackage: text-2.1.2
+    url: https://github.com/codewars/hspec-formatters-codewars/archive/v0.3.0.tar.gz
 - completed:
-    hackage: data-array-byte-0.1.0.1@sha256:3a4040018d8f90beef81ecd0ba37f266a9aaad3e902dd790f09056f892ba22fb,1989
+    name: hspec-codewars
     pantry-tree:
-      sha256: 9258a7397a384d988886c324d91c695b41f210dbab3e9500833da240482599c1
+      sha256: f6844085874e2f24734cedddbfb3ec66870fc876e674eda3239332aa68662db4
       size: 326
+    sha256: 3c29ea2a255aef452e95655dbfbba2c168b2c44afbdad5b76729de3c0061d77b
+    size: 2990
+    url: https://github.com/codewars/hspec-codewars/archive/v0.1.0.tar.gz
+    version: 0.1.0
   original:
-    hackage: data-array-byte-0.1.0.1
+    url: https://github.com/codewars/hspec-codewars/archive/v0.1.0.tar.gz
+snapshots:
 - completed:
-    hackage: split-0.2.5@sha256:5bc1ae848bfded3087ea3e568908f1b75f56ecde6f02df3fad1a138dd5c783d5,2625
-    pantry-tree:
-      sha256: 5d28c851a2c98e3d8ac0f01adc58303d775afe39dce23ec953be64ae65d11166
-      size: 443
-  original:
-    hackage: split-0.2.5
-snapshots: []
+    sha256: 5a59b2a405b3aba3c00188453be172b85893cab8ebc352b1ef58b0eae5d248a2
+    size: 650475
+    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/20/26.yaml
+  original: lts-20.26
