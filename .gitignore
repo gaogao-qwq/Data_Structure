@@ -1,14 +1,31 @@
+# bin
 *.exe
 *.out
+*.hi
+*.ho
+*.o
 
-Cargo.lock
+# garbage
+.DS_Store
 
+# scala
+.bsp
+.metals
+.scala-build
+
+# cache
 .cache
-cmake-build-debug-qt
+
+# vscode
 .vscode
+
+# idea
 .idea
+cmake-build-debug-qt
 cmake-build-debug
 cmake-debug-build
+
+# common output dir
 out
 target
 build
