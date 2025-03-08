@@ -29,6 +29,7 @@ dependencies:
 - text
 - transformers
 - vector
+- containers
 
 library:
   source-dirs: src

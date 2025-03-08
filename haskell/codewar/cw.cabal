@@ -19,6 +19,7 @@ library
     , QuickCheck
     , attoparsec
     , base >=4.7 && <5
+    , containers
     , haskell-src-exts
     , hspec
     , hspec-attoparsec
